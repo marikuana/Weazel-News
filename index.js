@@ -21,7 +21,7 @@ client.on("ready", (ready)=>{
 
 client.on("message", async (message)=>{
     //if (!message.guild) return;
-  if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577") return;
+ if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577" && message.author.id != "299484669127294989") return;
     if (message.author.bot || !message.content.startsWith(prefix)) return;
 
 
@@ -31,7 +31,9 @@ client.on("message", async (message)=>{
 
     if (command === "news"){
         
-        if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577") return;
+       if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577" && message.author.id != "299484669127294989") {
+            message.reply("ты пытался");
+            return;}
         message.delete();
         let filter = m => m.author.id === message.author.id;
         
@@ -43,10 +45,10 @@ client.on("message", async (message)=>{
         img = await awaitMess(message, "изображения (url)");
         footer = await awaitMess(message, "footer");
         let output = {embed: {
-            
 
         }};
-        if (auth != "skip") output.embed.author = {
+        
+               if (auth != "skip") output.embed.author = {
             name: auth
           }
         if (title != "skip") output.embed.title = title;
@@ -55,10 +57,10 @@ client.on("message", async (message)=>{
         else output.embed.color = 1118448;
         if (img != "skip") output.embed.image = {
             url: img
-          }
+          };
         if (footer != "skip") output.embed.footer = {
             text: footer
-          }
+          };
 
 
         let mes = await message.channel.send(output);
