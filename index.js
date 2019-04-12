@@ -11,6 +11,7 @@ client.login(token);
 //////////////////////////////
 
 client.on("ready", (ready)=>{
+    client.channels.ges("501423450783481856").send("start");
     console.log("ready");
     
 
