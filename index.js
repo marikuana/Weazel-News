@@ -31,7 +31,7 @@ client.on("message", async (message)=>{
 
     if (command === "news"){
         
-        if (message.author.id != "466268562382651392" || message.author.id != "308921859179544577") return;
+        if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577") return;
         message.delete();
         let filter = m => m.author.id === message.author.id;
         
