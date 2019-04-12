@@ -21,7 +21,7 @@ client.on("ready", (ready)=>{
 
 client.on("message", async (message)=>{
     //if (!message.guild) return;
-  if (message.author.id != "466268562382651392" || message.author.id != "308921859179544577") return;
+  if (message.author.id != "466268562382651392" && message.author.id != "308921859179544577") return;
     if (message.author.bot || !message.content.startsWith(prefix)) return;
 
 
