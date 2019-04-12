@@ -72,7 +72,7 @@ client.on("message", async (message)=>{
         .then(r=>{
             if (r.first().emoji.name === "✅"){
                 message.channel.send("Опубликовано (НЕТ)");
-                client.channels.get("503581516815663134").send(output);
+                client.channels.get("560552268165021696").send(output);
             }
             else
             message.channel.send("Отмена");
