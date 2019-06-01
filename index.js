@@ -71,7 +71,7 @@ client.on("message", async (message)=>{
         mes.awaitReactions(filter_2,{time: 60000,errors:'error',max:1})
         .then(r=>{
             if (r.first().emoji.name === "✅"){
-                        client.guilds.get("560532461701038145").channels.get("560552268165021696").send(output)
+                 client.guilds.get("560532461701038145").channels.get("560552268165021696").send(output)
                 .then(()=>{message.channel.send("Опубликовано");})
                 .catch(err=>{message.channel.send(`Немогу опубликовать:\n${err}`); console.error});
             }
