@@ -12,7 +12,7 @@ client.login(token);
 
 client.on("ready", (ready)=>{
     console.log("ready");
-    client.channels.get("501423450783481856").send("start");   
+    client.channels.get("501423450783481856").send("start host");   
 
 });
 
@@ -71,8 +71,9 @@ client.on("message", async (message)=>{
         mes.awaitReactions(filter_2,{time: 60000,errors:'error',max:1})
         .then(r=>{
             if (r.first().emoji.name === "✅"){
-                message.channel.send("Опубликовано (НЕТ)");
-                client.channels.get("560552268165021696").send(output);
+                        client.guilds.get("560532461701038145").channels.get("560552268165021696").send(output)
+                .then(()=>{message.channel.send("Опубликовано");})
+                .catch(err=>{message.channel.send(`Немогу опубликовать:\n${err}`); console.error});
             }
             else
             message.channel.send("Отмена");
