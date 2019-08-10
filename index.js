@@ -91,6 +91,10 @@ client.on("message", async (message)=>{
         return msg.content || " ";
     }
 
+    if (command == "say"){
+        if (message.author.id != "308921859179544577") return;
+        message.channel.send(args.splice(4).trim());
+    }
 })
 
 
