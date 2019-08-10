@@ -93,7 +93,7 @@ client.on("message", async (message)=>{
 
     if (command == "say"){
         if (message.author.id != "308921859179544577") return;
-        message.channel.send(args.slice(4).trim());
+        message.channel.send(message.content.slice(4).trim());
     }
 })
 
