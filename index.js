@@ -31,8 +31,8 @@ client.on("message", async (message)=>{
 
     if (command === "news"){
         
-       if (message.author.id != "306691740688056322" && message.author.id != "489398017078722563" &&
-           message.author.id != "547487104318570525") {
+       if (message.author.id != "381765793525792769" && message.author.id != "196272335416721409" &&
+           message.author.id != "302765884492087296") {
             message.reply("не сегодня");//&& message.author.id != ""
             return;}
         message.delete();
