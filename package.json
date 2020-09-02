@@ -5,7 +5,7 @@
   "dependencies": {
     "canvas": "^2.3.1",
     "discord.js": "^11.4.2",
-    "googleapis": "^37.2.0",
+    "googleapis": "^59.0.0",
     "simple-youtube-api": "^5.1.1",
     "ytdl-core": "^0.29.1"
   },
